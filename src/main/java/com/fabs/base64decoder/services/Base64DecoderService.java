@@ -19,6 +19,18 @@ public class Base64DecoderService {
 	}
 
 	public DecryptedTransactionResponse getDecodedResponse(EncryptedTransactionRequest encryptedTransactionRequest) {
-		return null;
+		DecryptedTransactionResponse decryptedTransactionResponse = new DecryptedTransactionResponse();
+		decryptedTransactionResponse.setRequestId(encryptedTransactionRequest.getRequestId());
+		decryptedTransactionResponse.setAmount(this.getDecodedString(encryptedTransactionRequest.getAmount()));
+		decryptedTransactionResponse.setDestinationAccountNumber(
+				this.getDecodedString(encryptedTransactionRequest.getDestinationAccountNumber()));
+		decryptedTransactionResponse.setNote(encryptedTransactionRequest.getNote());
+		decryptedTransactionResponse.setRequester(encryptedTransactionRequest.getRequester());
+		decryptedTransactionResponse
+				.setSourceAccountNumber(this.getDecodedString(encryptedTransactionRequest.getSourceAccountNumber()));
+		decryptedTransactionResponse
+				.setTransactionType(this.getDecodedString(encryptedTransactionRequest.getTransactionType()));
+
+		return decryptedTransactionResponse;
 	}
 }
