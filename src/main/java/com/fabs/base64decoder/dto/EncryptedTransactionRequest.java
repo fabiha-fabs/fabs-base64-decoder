@@ -6,7 +6,7 @@ public class EncryptedTransactionRequest {
 
 	@NotNull
 	private String requestId;
-	
+
 	@NotNull
 	private String requester;
 
@@ -21,13 +21,13 @@ public class EncryptedTransactionRequest {
 
 	@NotNull
 	private String destinationAccountNumber;
-	
+
 	@NotNull
 	private String note;
 
-	public EncryptedTransactionRequest(@NotNull String requestId, @NotNull String requester, @NotNull String transactionType,
-			@NotNull String sourceAccountNumber, @NotNull String amount, @NotNull String destinationAccountNumber,
-			@NotNull String note) {
+	public EncryptedTransactionRequest(@NotNull String requestId, @NotNull String requester,
+			@NotNull String transactionType, @NotNull String sourceAccountNumber, @NotNull String amount,
+			@NotNull String destinationAccountNumber, @NotNull String note) {
 		super();
 		this.requestId = requestId;
 		this.requester = requester;
@@ -36,6 +36,9 @@ public class EncryptedTransactionRequest {
 		this.amount = amount;
 		this.destinationAccountNumber = destinationAccountNumber;
 		this.note = note;
+	}
+
+	public EncryptedTransactionRequest() {
 	}
 
 	public String getRequestId() {
@@ -93,6 +96,5 @@ public class EncryptedTransactionRequest {
 	public void setNote(String note) {
 		this.note = note;
 	}
-	
-	
+
 }
