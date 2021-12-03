@@ -22,3 +22,6 @@
 					"amount": "MTUwMC41MA==",
 					"note": "Test data"
 				}
+
+# NOTE:
+As we are having this application as a microservice, it has dependency on Eureka discovery server project. That application should be running before we run this one..
