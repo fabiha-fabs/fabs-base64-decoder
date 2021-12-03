@@ -10,9 +10,9 @@
 # End points:
 1. Once the project is running, you can access the only endpoint that this microservice offers:
 
-	Request Method: POST
-	End-point: http://localhost:8282/base64/decode
-	Request body: 
+		Request Method: POST
+		End-point: http://localhost:8282/base64/decode
+		Request body: 
 				{
 					"requestId": "A32W4ER2341",
 					"requester": "XYZ App",
